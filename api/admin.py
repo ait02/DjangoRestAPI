@@ -7,3 +7,4 @@ from .models import Article
 class ArticleAdmin(admin.ModelAdmin):
     list_filter = ('title', 'description')
     list_display = ('title', 'description')
+    prepopulated_fields = {'slug': ('title',)}
