@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Article
+from .models import Task
 
-class ArticleSerializer(serializers.ModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Article
-        fields = ['id', 'title', 'description']
+        model = Task
+        fields = ['id', 'text', 'day', 'reminder']

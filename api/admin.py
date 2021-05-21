@@ -1,10 +1,9 @@
 from django.contrib import admin
-from .models import Article
+from .models import Task
 
 # Register your models here.
 
-@admin.register(Article)
-class ArticleAdmin(admin.ModelAdmin):
-    list_filter = ('title', 'description')
-    list_display = ('title', 'description')
-    prepopulated_fields = {'slug': ('title',)}
+@admin.register(Task)
+class TaskAdmin(admin.ModelAdmin):
+    list_filter = ('text', 'day', 'reminder')
+    list_display = ('text', 'day', 'reminder')
